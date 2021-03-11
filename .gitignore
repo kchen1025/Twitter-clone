@@ -30,3 +30,4 @@ chart/**/*.tgz
 chart/**/requirements.lock
 coverage
 *.pyc
+.env

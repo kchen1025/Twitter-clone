@@ -4,25 +4,35 @@
   "description": "Starter project for Typescript NodeJS.",
   "scripts": {
     "start": "node dist/server.js",
-    "dev": "nodemon --watch src --exec ts-node src/server.ts",
+    "dev": "nodemon --watch src --exec ts-node src/index.ts",
     "build": "tsc",
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "dev:client": "npm run dev --prefix=src-client",
     "dev-all": "concurrently \"npm run dev\" \"npm run dev --prefix src-client\"",
     "build-all": "npm run build && npm run build --prefix src-client",
-    "lint-all": "tslint -c tslint.json -p tsconfig.json && npm run lint --prefix src-client"
+    "lint-all": "tslint -c tslint.json -p tsconfig.json && npm run lint --prefix src-client",
+    "db": "ts-node ./src/utils/runQuery.ts",
+    "test": "jest"
   },
   "author": "deskoh",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
+    "morgan": "^1.10.0",
+    "pg": "^8.5.1",
     "typescript": "^3.2.2"
   },
   "devDependencies": {
     "@types/express": "^4.16.0",
     "@types/express-session": "^1.15.11",
+    "@types/jest": "^26.0.20",
+    "@types/morgan": "^1.9.2",
+    "@types/pg": "^7.14.11",
     "concurrently": "^4.1.0",
+    "http-status-codes": "^2.1.4",
+    "jest": "^26.6.3",
     "nodemon": "^1.18.9",
     "ts-node": "^7.0.1",
     "tsconfig-paths": "^3.7.0",
