@@ -1,5 +1,5 @@
 import { pool } from '../models/pool';
-import { createUrlMapping, seedUrlMapping } from './utils';
+import { create, destroy, seed } from './utils';
 
 export const executeQueryArray = async (arr: string[]) =>
   new Promise((resolve: any) => {
@@ -25,5 +25,7 @@ export const queryPromise = (query: string, args: any[]) => {
   });
 };
 
-export const seedTables = () => executeQueryArray([seedUrlMapping]);
-export const createTables = () => executeQueryArray([createUrlMapping]);
+export const seedTables = () => executeQueryArray([seed]);
+export const createTables = () => executeQueryArray([create]);
+export const destroyTables = () => executeQueryArray([destroy]);
+

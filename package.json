@@ -12,7 +12,8 @@
     "dev-all": "concurrently \"npm run dev\" \"npm run dev --prefix src-client\"",
     "build-all": "npm run build && npm run build --prefix src-client",
     "lint-all": "tslint -c tslint.json -p tsconfig.json && npm run lint --prefix src-client",
-    "db": "ts-node ./src/utils/runQuery.ts",
+    "db:up": "ts-node ./src/utils/runQuery.ts",
+    "db:down": "ts-node ./src/utils/runQueryDown.ts",
     "test": "jest"
   },
   "author": "deskoh",
