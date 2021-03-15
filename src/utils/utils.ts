@@ -3,11 +3,13 @@
 export const create: string = `
 create table if not exists account (
   id serial primary key,
+  google_id text,
   username text not null,
   email text not null,
   name text not null,
-  date_of_birth date not null,
+  date_of_birth date,
   added timestamptz not null default now(),
+  updated timestamptz not null default now(),
   last_login timestamptz
 );
 create unique index unique_username on account (username);
