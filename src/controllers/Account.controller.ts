@@ -1,5 +1,16 @@
 import { db } from '../models';
 
-const Account = db.account;
-console.log('Account controller', Account)
+const Account = () => {
+  const AccountModel = db.account;
+
+  // declare custom classes within
+  AccountModel.yeet = async () => {
+    const whatever = AccountModel.findAll();
+    return whatever;
+  };
+
+  // return the instance
+  return AccountModel;
+};
+
 export default Account;

@@ -37,8 +37,8 @@ export default (sequelize: any, Sequelize: any) => {
     sequelize, // We need to pass the connection instance
     modelName: 'Account', // We need to choose the model name
     tableName: 'account', // need to tell sequelize table name or it will automatically pluralize the model name and pull from there (select * from Accounts)
-    createdAt: 'added',
-    updatedAt: 'updated'
+    createdAt: 'added', // rename the default timestamp 'createdAt' to be 'added'
+    updatedAt: 'updated' // rename default 'updatedAt' to 'updated'
 
   });
 
