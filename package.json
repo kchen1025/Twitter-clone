@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Starter project for Typescript NodeJS.",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "node dist/index.js",
     "dev": "nodemon --watch src --exec ts-node src/index.ts",
     "debug": "nodemon --watch src --exec node -r ts-node/register --inspect=9228 src/index.ts",
     "build": "tsc",
@@ -16,9 +16,14 @@
     "db:down": "ts-node ./src/utils/runQueryDown.ts",
     "test": "jest"
   },
+  "engines": {
+    "node": "10.14.2",
+    "npm": "6.11.3"
+  },
   "author": "deskoh",
   "license": "ISC",
   "dependencies": {
+    "@types/validator": "^13.1.3",
     "cookie-session": "^1.4.0",
     "dotenv": "^8.2.0",
     "express": "^4.16.4",
