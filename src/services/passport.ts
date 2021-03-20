@@ -16,7 +16,8 @@ passport.deserializeUser(async (id, done) => {
 passport.use(new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENT_ID || 'whatever',
   clientSecret: process.env.GOOGLE_SECRET || 'whatever',
-  callbackURL: '/auth/google/callback'
+  callbackURL: '/auth/google/callback',
+  proxy: true
 },  async (accessToken, refreshToken, profile, done) => {
   console.log('accesstoken', accessToken, refreshToken, profile);
   const Account = AccountController();
