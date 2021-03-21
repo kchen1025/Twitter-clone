@@ -4,7 +4,7 @@
   "description": "Typescript React starter",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "NPM_CONFIG_PRODUCTION=false webpack --mode production",
     "dev": "webpack-dev-server --mode=development",
     "lint": "tslint -p tsconfig.json"
   },
