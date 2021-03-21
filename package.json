@@ -15,6 +15,7 @@
     "db:up": "ts-node ./src/utils/runQuery.ts",
     "db:down": "ts-node ./src/utils/runQueryDown.ts",
     "test": "jest",
+    "postinstall": "tsc",
     "heroku-postbuild": "cd src-client && npm install && npm run build"
   },
   "engines": {
