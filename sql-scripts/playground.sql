@@ -1,7 +1,22 @@
-drop table if exists account_follow;
-drop table if exists favorite;
-drop table if exists tweet;
-drop table if exists account;
+-- drop table if exists account_follow;
+-- drop table if exists favorite;
+-- drop table if exists tweet;
+-- drop table if exists account;
+
+-- CREATE TABLE IF NOT EXISTS "account" 
+-- ("id"   SERIAL , 
+-- "google_id" VARCHAR(255), 
+-- "username" VARCHAR(255) NOT NULL, 
+-- "email" VARCHAR(255) NOT NULL, 
+-- "name" VARCHAR(255) NOT NULL, 
+-- "date_of_birth" DATE, 
+-- "added" TIMESTAMP WITH TIME ZONE NOT NULL, 
+-- "last_login" TIMESTAMP WITH TIME ZONE, 
+-- "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, 
+-- "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, 
+-- PRIMARY KEY ("id")
+-- );
+
 
 -- create table if not exists account (  
 --   id serial primary key,

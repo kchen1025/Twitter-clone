@@ -12,7 +12,9 @@ export const Hello = (props: HelloProps) => {
         <h1>
           Hello from {props.compiler} and {props.framework}!
         </h1>
-        <a href="/api">Backend API endsdfspoint.</a>
+        <div><a href="/api">Backend API endsdfspoint.</a></div>
+        <div><a href="/auth/google">sign in with google</a></div>
+        <div><a href="/auth/logout">logout</a></div>
       </div>
     </React.Fragment>
   );
