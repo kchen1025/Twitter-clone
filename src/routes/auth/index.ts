@@ -7,9 +7,11 @@ authRouter.get('/google', passport.authenticate('google', {
   scope: ['profile', 'email']
 }));
 
-authRouter.get('/google/callback', passport.authenticate('google'));
+authRouter.get('/google/callback', passport.authenticate('google'), (req, res) => {
+  res.redirect('/');
+});
 
 authRouter.get('/logout', (req, res) => {
   req.logout();
-  res.send(req.user);
+  res.redirect('/');
 });

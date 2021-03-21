@@ -28,3 +28,16 @@ export const errorHandler = (
 
   res.status(output.httpStatusCode).send(output);
 };
+
+// middleware for requiring login
+export const requireLogin = (
+  req: express.Request,
+  res: express.Response,
+  next: express.NextFunction
+) => {
+  if(!req.user) {
+    return res.status(401).send({error: 'You are not logged in'});
+  }
+
+  return next();
+};
