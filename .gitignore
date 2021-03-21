@@ -31,3 +31,12 @@ chart/**/requirements.lock
 coverage
 *.pyc
 *.env
+# dependencies
+src-client/node_modules
+
+# misc
+src-client/.DS_Store
+src-client/.env.local
+src-client/.env.development.local
+src-client/.env.test.local
+src-client/.env.production.local
